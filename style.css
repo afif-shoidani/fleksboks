@@ -1,0 +1,130 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #ddd;
+}
+nav {
+  display: flex;
+  background-color: rgb(161, 100, 218);
+  justify-content: space-around;
+  padding: 20px 0;
+  color: rgb(196, 185, 206);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+nav .logo {
+  font-family: "Pacifico", cursive;
+  letter-spacing: 3px;
+}
+
+nav .navbar {
+  display: flex;
+  list-style: none;
+  width: 40%;
+  justify-content: space-between;
+}
+nav .navbar a {
+  color: rgb(191, 129, 249);
+  text-decoration: none;
+}
+
+nav .navbar a:hover {
+  color: rgb(240, 236, 243);
+}
+#menu {
+  display: none;
+}
+#x {
+  display: none;
+}
+.container-satu {
+  padding-left: 50px;
+  padding-right: 50px;
+  margin: 70px auto;
+  display: flex;
+  background-color: aliceblue;
+  box-sizing: border-box;
+}
+.sidebar-satu {
+  flex: 3;
+  order: 2;
+  margin-left: 0px;
+}
+.sidebar-dua {
+  flex: 1;
+  order: 1;
+}
+.sidebar-dua ul a {
+  text-decoration: none;
+  list-style: none;
+  display: block;
+  padding-left: 10px;
+}
+.sidebar-tiga {
+  flex: 1;
+  order: 3;
+}
+.container-dua {
+  max-width: 100%;
+  height: 150%;
+  margin: 50px auto;
+  display: flex;
+  padding: 30px;
+  justify-content: space-between;
+}
+.layanan {
+  width: 30%;
+  box-sizing: border-box;
+}
+.layanan.satu {
+  background-color: aqua;
+}
+.layanan.dua {
+  background-color: rgb(215, 33, 94);
+}
+.layanan.tiga {
+  background-color: rgb(27, 211, 14);
+}
+
+@media screen and (max-width: 768px) {
+  nav .navbar {
+    width: 60%;
+  }
+  html {
+    font-size: 80%;
+  }
+}
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 70%;
+  }
+  #menu {
+    display: block;
+  }
+  .nav .navbar {
+    position: absolute;
+    top: 100%;
+    right: 100%;
+    background-color: aliceblue;
+    width: 30rem;
+    height: 90vh;
+    transition: 0.3s;
+    flex-direction: column;
+    font-size: 2rem;
+  }
+  .nav .navbar.active {
+    right: 0;
+  }
+  .nav .navbar a {
+    color: rgb(191, 129, 249);
+
+    margin: 1.5rem;
+    padding: 0.5rem;
+  }
+}
